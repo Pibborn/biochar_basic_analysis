@@ -62,7 +62,7 @@ def plot_feature_label_correlations(
     plt.ylabel("Feature")
     plt.title(f"Feature ↔ {label} correlations")
     plt.tight_layout()
-    plt.show()
+    plt.savefig('test_{}.png'.format(label.replace('/', '_')))
 
     # Optional scatter facets with best-fit lines
     if show_scatter and len(corr) > 0:
